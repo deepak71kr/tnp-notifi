@@ -1,21 +1,41 @@
-{
-  "name": "tnp-notification",
-  "version": "1.0.0",
-  "description": "A Node.js web scraping project to monitor job listings.",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "init": "node initialize.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^1.7.2",
-    "axios-cookiejar-support": "^4.0.8",
-    "cheerio": "^1.0.0-rc.12",
-    "dotenv": "^16.4.5",
-    "tough-cookie": "^4.1.4",
-    "nodemailer": "^6.9.13"
-  }
-}
+name: T&P Notifier
+
+on:
+  schedule:
+    # Runs the job every 30 minutes
+    - cron: '*/30 * * * *'
+  # Allows for manual runs from the GitHub Actions tab
+  workflow_dispatch:
+
+jobs:
+  run-scraper:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install npm dependencies
+        run: npm install
+
+      - name: Run initialization script once
+        run: npm run init
+        if: github.event_name == 'workflow_dispatch'
+
+      - name: Run monitoring script
+        run: npm start
+        env:
+          USERNAME: ${{ secrets.USERNAME }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+          LOGIN_PAGE_URL: ${{ secrets.LOGIN_PAGE_URL }}
+          TARGET_PAGE_URL: ${{ secrets.TARGET_PAGE_URL }}
+          CHECK_INTERVAL_MINUTES: ${{ secrets.CHECK_INTERVAL_MINUTES }}
+          EMAIL_SERVICE: ${{ secrets.EMAIL_SERVICE }}
+          EMAIL_USER: ${{ secrets.EMAIL_USER }}
+          EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+          RECIPIENT_EMAILS: ${{ secrets.RECIPIENT_EMAILS }}

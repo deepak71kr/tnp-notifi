@@ -1,20 +1,21 @@
 {
   "name": "tnp-nodejs",
   "version": "1.0.0",
+  "description": "A Node.js web scraping project to monitor job listings.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "init": "node initialize.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
-    "axios": "^1.11.0",
-    "axios-cookiejar-support": "^6.0.4",
-    "cheerio": "^1.1.2",
-    "dotenv": "^17.2.1",
-    "nodemailer": "^7.0.5",
-    "tough-cookie": "^5.1.2"
+    "axios": "^1.7.2",
+    "axios-cookiejar-support": "^4.0.8",
+    "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^16.4.5",
+    "tough-cookie": "^4.1.4",
+    "nodemailer": "^6.9.13"
   }
 }
