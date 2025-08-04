@@ -3,7 +3,7 @@ name: T&P Notifier
 on:
   schedule:
     # Runs the job every 10 minutes
-    - cron: '*/10 * * * *'
+    - cron: '0 0 * * *'
   # Allows for manual runs from the GitHub Actions tab
   workflow_dispatch:
 
