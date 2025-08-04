@@ -56,7 +56,7 @@ async function monitorJobPortal() {
     console.error(`[${new Date().toLocaleString()}] An error occurred during monitoring:`, error);
   } finally {
     await closeConnection(); 
-    console.log(`[${new Date().toLocaleString()}] Check finished. Waiting for next run.`);
+    console.log(`[${new Date().toLocaleString()}] Check finished. Waiting for next run. =============================`);
   }
 }
 
