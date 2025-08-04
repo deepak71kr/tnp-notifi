@@ -7,6 +7,10 @@ on:
   # Allows for manual runs from the GitHub Actions tab
   workflow_dispatch:
 
+concurrency: 
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
 jobs:
   run-scraper:
     runs-on: ubuntu-latest
@@ -40,7 +44,6 @@ jobs:
           EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
           RECIPIENT_EMAILS: ${{ secrets.RECIPIENT_EMAILS }}
 
-      # New Step: Commit and push changes back to the repository
       - name: Commit updated data files
         run: |
           git config --global user.name "github-actions[bot]"
