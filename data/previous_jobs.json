@@ -1,5 +1,11 @@
 [
   {
+    "company": "Oracle India Private Limited",
+    "deadline": "05/08/2025",
+    "postedDate": "04/08/2025",
+    "link": "https://tp.bitmesra.co.in/job/notice/c0b57c3e23c5fb476adb9f1cb40ec0e9"
+  },
+  {
     "company": "Publicis Sapient",
     "deadline": "01/08/2025",
     "postedDate": "01/08/2025",
@@ -10,12 +16,6 @@
     "deadline": "31/07/2025",
     "postedDate": "30/07/2025",
     "link": "https://tp.bitmesra.co.in/job/notice/447f25939ca3752db9b90b585df173de"
-  },
-  {
-    "company": "Goldman Sachs",
-    "deadline": "30/07/2025",
-    "postedDate": "29/07/2025",
-    "link": "https://tp.bitmesra.co.in/job/notice/304d2314a47e65086d8f4e1930af3ebf"
   },
   {
     "company": "Accenture India",
@@ -30,16 +30,22 @@
     "link": "https://tp.bitmesra.co.in/job/notice/c8ac522df6125a2d234aa4e3f6368a7c"
   },
   {
-    "company": "ServiceNow",
-    "deadline": "25/07/2025",
-    "postedDate": "25/07/2025",
-    "link": "https://tp.bitmesra.co.in/job/notice/8d1cb9216da95baccc29b9f7678acf36"
+    "company": "Goldman Sachs",
+    "deadline": "30/07/2025",
+    "postedDate": "29/07/2025",
+    "link": "https://tp.bitmesra.co.in/job/notice/304d2314a47e65086d8f4e1930af3ebf"
   },
   {
     "company": "Fractal Analytics",
     "deadline": "25/07/2025",
     "postedDate": "25/07/2025",
     "link": "https://tp.bitmesra.co.in/job/notice/bdd268fe9e18a7d631db84bcd37087b7"
+  },
+  {
+    "company": "ServiceNow",
+    "deadline": "25/07/2025",
+    "postedDate": "25/07/2025",
+    "link": "https://tp.bitmesra.co.in/job/notice/8d1cb9216da95baccc29b9f7678acf36"
   },
   {
     "company": "L&T Technology Services",
@@ -54,28 +60,28 @@
     "link": "https://tp.bitmesra.co.in/job/notice/1e18a1392718708f299e33d62853f5e3"
   },
   {
-    "company": "Blucore Software Pvt Ltd",
-    "deadline": "24/07/2025",
-    "postedDate": "23/07/2025",
-    "link": "https://tp.bitmesra.co.in/job/notice/c7e5b0fd42962893b8625cba88d4f37d"
-  },
-  {
     "company": "MSCI",
     "deadline": "25/07/2025",
     "postedDate": "23/07/2025",
     "link": "https://tp.bitmesra.co.in/job/notice/e1524c64b72d6ce84b0093443ac9b925"
   },
   {
-    "company": "D. E. Shaw India Private Limited",
-    "deadline": "23/07/2025",
-    "postedDate": "22/07/2025",
-    "link": "https://tp.bitmesra.co.in/job/notice/c6c28499126a11428321728b08aba2bf"
+    "company": "Blucore Software Pvt Ltd",
+    "deadline": "24/07/2025",
+    "postedDate": "23/07/2025",
+    "link": "https://tp.bitmesra.co.in/job/notice/c7e5b0fd42962893b8625cba88d4f37d"
   },
   {
     "company": "MakeMyTrip Private Ltd",
     "deadline": "23/07/2025",
     "postedDate": "22/07/2025",
     "link": "https://tp.bitmesra.co.in/job/notice/8563eb82d4879345e63cfddb6c60c3bb"
+  },
+  {
+    "company": "D. E. Shaw India Private Limited",
+    "deadline": "23/07/2025",
+    "postedDate": "22/07/2025",
+    "link": "https://tp.bitmesra.co.in/job/notice/c6c28499126a11428321728b08aba2bf"
   },
   {
     "company": "rtCamp Solutions Pvt. Ltd.",
