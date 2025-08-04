@@ -13,6 +13,9 @@ const transporter = nodemailer.createTransport({
     user: EMAIL_USER,
     pass: EMAIL_PASS,
   },
+  connectionTimeout: 30000,
+  greetingTimeout: 15000,
+  socketTimeout: 30000,
 });
 
 function createHtmlEmail(subject, newEntries) {
@@ -82,7 +85,15 @@ async function sendNotification(subject, newEntries) {
     await transporter.sendMail(mailOptions);
     console.log(`Email notification sent successfully to ${RECIPIENT_EMAILS.length} recipient(s).`);
   } catch (error) {
-    console.error('Error sending email:', error);
+    if (error.code === 'ECONNRESET' || error.code === 'ESOCKET') {
+      console.error(`Email connection error (${error.code}): Network connection was reset.`);
+    } else if (error.code === 'EAUTH') {
+      console.error('Email authentication failed. Please check your email credentials.');
+    } else if (error.code === 'ETIMEDOUT') {
+      console.error('Email connection timed out. Please check your internet connection.');
+    } else {
+      console.error('Error sending email:', error.message);
+    }
   }
 }
 

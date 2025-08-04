@@ -7,11 +7,7 @@ on:
   # Allows for manual runs from the GitHub Actions tab
   workflow_dispatch:
 
-# Add permissions to allow the workflow to write to the repository
-permissions:
-  contents: write
-
-concurrency: 
+concurrency:
   group: ${{ github.workflow }}
   cancel-in-progress: true
 
@@ -22,8 +18,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -49,12 +43,4 @@ jobs:
           EMAIL_USER: ${{ secrets.EMAIL_USER }}
           EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
           RECIPIENT_EMAILS: ${{ secrets.RECIPIENT_EMAILS }}
-
-      - name: Commit updated data files
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/
-          git commit -m "Update data files with latest scrape results" || exit 0
-          # The definitive fix: use the GITHUB_TOKEN directly for authentication
-          git push https://github-actions[bot]:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          MONGO_URI: ${{ secrets.MONGO_URI }}
